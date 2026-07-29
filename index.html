@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Esports | Premium Reward Drop</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2063488144265267');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2063488144265267&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    <!-- Google Fonts Fix -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for easy customization */
+        :root {
+            --primary: #ff4400;
+            --primary-glow: rgba(255, 68, 0, 0.5);
+            --secondary: #ffcc00;
+            --bg-dark: #050508;
+            --card-bg: rgba(13, 13, 22, 0.75);
+            --border-color: rgba(255, 68, 0, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--bg-dark);
+        }
+
+        body {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* यहाँ पर आपकी दी गई इमेज को बैकग्राउंड में सेट किया गया है */
+            background-image: 
+                radial-gradient(circle at 50% -20%, rgba(255, 68, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 110%, rgba(122, 14, 230, 0.15) 0%, transparent 50%),
+                url('https://i.ibb.co/svgjF4h7/1784243239466.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Cyberpunk Header */
+        .cyber-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            background: rgba(5, 5, 8, 0.9);
+            border-bottom: 2px solid var(--primary);
+            box-shadow: 0 4px 20px rgba(255, 68, 0, 0.15);
+            height: 50px;
+            z-index: 10;
+        }
+
+        .logo-box {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--primary-glow);
+        }
+        .logo-box span { color: var(--primary); }
+        
+        .hashtag { 
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary); 
+            font-weight: 900; 
+            font-size: 0.9rem; 
+            text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
+        }
+
+        /* Glow Timer Banner */
+        .timer-banner {
+            background: linear-gradient(90deg, var(--primary), #e63900);
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            height: 28px;
+            box-shadow: 0 2px 10px var(--primary-glow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .timer-display {
+            color: var(--secondary);
+            background: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Container */
+        .hero-arena {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            padding: 15px;
+            height: calc(100vh - 148px);
+        }
+
+        .main-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-align: center;
+            color: #f1f1f5;
+        }
+
+        .promo-strip {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: #000;
+            background: var(--secondary);
+            padding: 4px 24px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            transform: skewX(-12deg);
+            box-shadow: -4px 4px 0px var(--primary);
+            text-transform: uppercase;
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: skewX(-12deg) scale(1); }
+            100% { transform: skewX(-12deg) scale(1.03); }
+        }
+
+        /* Premium Glassmorphism Card */
+        .square-capsule {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), 0 0 15px rgba(255, 68, 0, 0.05);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-top: 3px solid var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            width: 200px;
+            height: 200px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 12px;
+            transition: transform 0.3s ease;
+        }
+        .square-capsule:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px 0 rgba(255, 68, 0, 0.15);
+        }
+
+        .image-frame {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(255,68,0,0.15) 0%, transparent 75%);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .image-frame img {
+            max-width: 85%;
+            max-height: 85%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(255, 68, 0, 0.5));
+        }
+
+        .details-row {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 8px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        /* Interactive Cyber Button - HIGH VISIBILITY UPGRADE */
+        .action-zone {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cyber-cta-btn {
+            background: linear-gradient(135deg, #ff4400, #ff8800);
+            color: #ffffff !important;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+            padding: 14px 55px;
+            cursor: pointer;
+            text-transform: uppercase;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(255, 68, 0, 0.6);
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        .cyber-cta-btn:hover {
+            transform: scale(1.05) skewX(-5deg);
+            background: linear-gradient(135deg, #ff5511, #ff9922);
+            box-shadow: 0 0 35px rgba(255, 68, 0, 0.8);
+        }
+
+        .cyber-cta-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Player Ticker */
+        .ticker-wrap {
+            width: 100%;
+            background: rgba(10, 10, 16, 0.9);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 8px 0;
+            overflow: hidden;
+            height: 38px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ticker {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+
+        .ticker-item {
+            display: inline-block;
+            padding: 0 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #b0b0c5;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ticker-item span {
+            color: var(--primary);
+            margin-right: 5px;
+            text-shadow: 0 0 5px var(--primary-glow);
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* Footer */
+        .footer-panel {
+            background: #020204;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.65rem;
+            color: #555566;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            height: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="cyber-nav">
+        <div class="logo-box">APEX <span>ESPORTS</span></div>
+        <div class="hashtag">BGIS 2026</div>
+    </nav>
+
+    <!-- Countdown Timer -->
+    <div class="timer-banner">
+        EVENT ENDS IN: <span id="countdown" class="timer-display">01:00:00</span>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="hero-arena">
+        <h1 class="main-title">ENTER THE REWARD DROP NOW</h1>
+        <div class="promo-strip">GUARANTEED SPIN</div>
+
+        <div class="square-capsule">
+            <div class="image-frame">
+                <img src="material.png" alt="Material Visual" onerror="this.style.display='none';">
+            </div>
+            <div class="details-row">
+                <span>Dark Mummy Suit</span>
+            </div>
+        </div>
+
+        <!-- Interactive Action Button -->
+        <div class="action-zone">
+            <button class="cyber-cta-btn" id="collectBtn" onclick="handleCollect()">COLLECT NOW</button>
+        </div>
+    </main>
+
+    <!-- Animated Players Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item"><span>★</span> M0RTAL</div>
+            <div class="ticker-item"><span>★</span> SC0UT</div>
+            <div class="ticker-item"><span>★</span> TAGJ0NATHAN</div>
+            <div class="ticker-item"><span>★</span> DYNAMO</div>
+            <div class="ticker-item"><span>★</span> VIPER</div>
+            <div class="ticker-item"><span>★</span> REGA</div>
+            <!-- Duplicated list for seamless looping -->
+            <div class="ticker-item"><span>★</span> M0RTAL</div>
+            <div class="ticker-item"><span>★</span> SC0UT</div>
+            <div class="ticker-item"><span>★</span> TAGJ0NATHAN</div>
+            <div class="ticker-item"><span>★</span> DYNAMO</div>
+            <div class="ticker-item"><span>★</span> VIPER</div>
+            <div class="ticker-item"><span>★</span> REGA</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-panel">
+        &copy; 2026 APEX ESPORTS. FRONT-END TRAINING INTERFACE ONLY.
+    </footer>
+
+    <script>
+        // Smooth Interactive Redirect Animation
+        function handleCollect() {
+            const btn = document.getElementById('collectBtn');
+            btn.innerHTML = "CONNECTING...";
+            btn.style.pointerEvents = "none";
+            btn.style.opacity = "0.8";
+            
+            setTimeout(() => {
+                window.location.href = 'https://event-reward.shop/s/kTyFSvG';
+            }, 1000);
+        }
+
+        // Optimized JavaScript Timer
+        let duration = 3600; 
+        const timerDisplay = document.getElementById('countdown');
+
+        const startTimer = setInterval(function () {
+            let hours = Math.floor(duration / 3600);
+            let minutes = Math.floor((duration % 3600) / 60);
+            let seconds = duration % 60;
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            timerDisplay.textContent = hours + ":" + minutes + ":" + seconds;
+
+            if (--duration < 0) {
+                clearInterval(startTimer);
+                timerDisplay.textContent = "00:00:00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
